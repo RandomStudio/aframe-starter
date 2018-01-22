@@ -12,11 +12,12 @@
         <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
        </a-assets>
 
-       <a-box color="#FFF" position="-10 3 -5" rotation="0 0 45" scale="2 2 2" src="#boxTexture" 
-        scale-on-mouseenter="to: 3.1 3.1 3.1"
-        
-        >
-          
+       <a-box color="#FFF" position="-10 3 -5" rotation="0 0 45" scale="2 2 2" src="#boxTexture">
+          <a-animation attribute="position" to="-10 4 -5" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
+          <!-- These animations will start when the box is looked at. -->
+          <a-animation attribute="scale" begin="mouseenter" dur="300" to="3.5 3.5 3.5"></a-animation>
+          <a-animation attribute="scale" begin="mouseleave" dur="1000" to="2 2 2"></a-animation>
+          <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
       </a-box>
 
       <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30"></a-plane>
