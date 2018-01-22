@@ -11,7 +11,8 @@
   "author": "Stephen Buchanan",
   "license": "ISC",
   "dependencies": {
-    "aframe": "^0.7.1"
+    "aframe": "^0.7.1",
+    "aframe-environment-component": "^1.0.0"
   },
   "devDependencies": {
     "parcel-bundler": "^1.4.1"
