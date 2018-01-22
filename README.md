@@ -20,6 +20,9 @@ npm run start
 ```
 Now open your web browser and point to `http://localhost:1234`
 
+![screenshot](./screenshot.JPG "In three (and a half?) steps")
+
+
 ## Next steps
 
 1. Open the folder up in your favourite text editor.
