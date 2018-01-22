@@ -20,8 +20,7 @@ npm run start
 ```
 Now open your web browser and point to `http://localhost:1234`
 
-![screenshot](./screenshot.JPG "In three (and a half?) steps")
-
+![screenshot](screenshot.jpg "Just 3 (and a half?) simple steps")
 
 ## Next steps
 
