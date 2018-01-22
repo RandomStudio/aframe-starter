@@ -10,6 +10,7 @@
         <img id="skyTexture"
         src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
         <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+        <audio id="cubenoise" src="audio/kicks.ogg"></audio>
        </a-assets>
 
        <a-box color="#FFF" position="-10 3 -5" rotation="0 0 45" scale="2 2 2" src="#boxTexture">
@@ -26,9 +27,13 @@
       <a-light type="ambient" color="#445451"></a-light>
       <a-light type="point" intensity="2" position="-20.392 13.33 23.373"></a-light>
 
+      <a-sound src="#cubenoise" autoplay="true" loop="true" position="-10 3 -5"></a-sound>
+
       <a-camera>
         <a-cursor></a-cursor>
       </a-camera>
+
+
 
     </a-scene>
   </body>
