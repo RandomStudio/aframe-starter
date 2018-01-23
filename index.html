@@ -20,8 +20,16 @@
           <!-- 360-degree image. -->
           <a-sky id="image-360" radius="10" src="#city"></a-sky>
           <!-- Link we will build. -->
-          <a-entity class="link"></a-entity>
+          <a-entity 
+            class="link"
+            geometry="primitive: plane; height: 1; width: 1"
+            material="shader: flat; src: #cubes-thumb"
+            sound="on: click; src: #click-sound"
+            position="0.048 1.26 -1.95"
+          >
+          </a-entity>
           <!-- Camera + Cursor. -->
+          
           <a-camera>
             <a-cursor id="cursor">
               <a-animation begin="click" easing="ease-in" attribute="scale"
@@ -30,6 +38,7 @@
                            from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
             </a-cursor>
           </a-camera>
+          
         </a-scene>
 
   </body>
