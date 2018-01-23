@@ -27,13 +27,15 @@
       <a-light type="ambient" color="#445451"></a-light>
       <a-light type="point" intensity="2" position="-20.392 13.33 23.373"></a-light>
 
-      <a-sound src="#cubenoise" autoplay="true" loop="true" position="-10 3 -5"></a-sound>
+      <a-sound src="#cubenoise" autoplay="true" loop="true" position="-10 3 -5" sound="rolloffFactor:5"></a-sound>
 
-      <a-camera>
-        <a-cursor></a-cursor>
+      <a-camera position="11.013 1.6 7.969" rotation="3.667 103.362 0" camera="active:true" look-controls="" wasd-controls="" data-aframe-inspector-original-camera="">
+        <a-cursor raycaster="" cursor=""></a-cursor>
       </a-camera>
 
-
+      <a-text value="Hello, A-Frame!" color="#BBB" position="-13.274 6.923 -12.966" scale="4 4 4">
+        <a-animation attribute="rotation" to="0 90 0" dur="5000" direction="alternate" repeat="indefinite"></a-animation>
+      </a-text>
 
     </a-scene>
   </body>
