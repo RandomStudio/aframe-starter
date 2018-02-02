@@ -12,7 +12,8 @@
               <a-entity class="link"
                 geometry="primitive: plane; height: 1; width: 1"
                 material="shader: flat; src: ${thumb}"
-                sound="on: click; src: #click-sound"></a-entity>
+                sound="on: click; src: #click-sound">
+              </a-entity>
             </script>
 
             <audio id="click-sound" src="audio/click.ogg"></audio>
@@ -30,10 +31,11 @@
           <a-sky id="image-360" radius="10" src="#city"></a-sky>
 
           <!-- Links. -->
-          <a-entity template="src: #plane" data-thumb="#city-thumb"></a-entity>
-          <a-entity template="src: #plane" data-thumb="#cubes-thumb"></a-entity>
-          <a-entity template="src: #plane" data-thumb="#sechelt-thumb"></a-entity>
-
+          <a-entity id="links" layout="layout: line; margin: 1.5" position="-3 -1 -4">
+            <a-entity template="src: #plane" data-thumb="#city-thumb"></a-entity>
+            <a-entity template="src: #plane" data-thumb="#cubes-thumb"></a-entity>
+            <a-entity template="src: #plane" data-thumb="#sechelt-thumb"></a-entity>
+          </a-entity>
 
           <!-- Camera + Cursor. -->
           <a-camera>
