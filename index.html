@@ -2,12 +2,19 @@
   <head>
     <title>A-frame starter project</title>
     <script src="index.js"></script>
-  </head>
   <body>
     
       <!-- starting point from https://aframe.io/docs/0.7.0/guides/building-a-360-image-gallery.html#skeleton -->
       <a-scene>
           <a-assets>
+            
+            <script id="plane" type="text/html">
+              <a-entity class="link"
+                geometry="primitive: plane; height: 1; width: 1"
+                material="shader: flat; src: ${thumb}"
+                sound="on: click; src: #click-sound"></a-entity>
+            </script>
+
             <audio id="click-sound" src="audio/click.ogg"></audio>
             <!-- Images. -->
             <img id="city" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
@@ -16,20 +23,19 @@
             <img id="cubes-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
             <img id="sechelt" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
             <img id="sechelt-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg">
+
           </a-assets>
+
           <!-- 360-degree image. -->
           <a-sky id="image-360" radius="10" src="#city"></a-sky>
-          <!-- Link we will build. -->
-          <a-entity 
-            class="link"
-            geometry="primitive: plane; height: 1; width: 1"
-            material="shader: flat; src: #cubes-thumb"
-            sound="on: click; src: #click-sound"
-            position="0.048 1.26 -1.95"
-          >
-          </a-entity>
+
+          <!-- Links. -->
+          <a-entity template="src: #plane" data-thumb="#city-thumb"></a-entity>
+          <a-entity template="src: #plane" data-thumb="#cubes-thumb"></a-entity>
+          <a-entity template="src: #plane" data-thumb="#sechelt-thumb"></a-entity>
+
+
           <!-- Camera + Cursor. -->
-          
           <a-camera>
             <a-cursor id="cursor">
               <a-animation begin="click" easing="ease-in" attribute="scale"
