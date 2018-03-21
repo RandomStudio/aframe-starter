@@ -23,9 +23,9 @@ Now open your web browser and point to `http://localhost:1234`
 ![screenshot](screenshot.jpg "Just 3 (and a half?) simple steps")
 
 ## More complex example
-You can see an example of the tutorial at https://aframe.io/docs/0.7.0/guides/building-a-basic-scene.html implemented using this starter project, which demonstrates environments, textures, interaction, lighting, text and audio. Just switch to the `tutorial` branch:
+You can see an example of the tutorial at https://aframe.io/docs/0.7.0/guides/building-a-basic-scene.html implemented using this starter project, which demonstrates environments, textures, interaction, lighting, text and audio. Just switch to the `tutorial-basic-scene` branch:
 ```
-git checkout tutorial
+git checkout tutorial-basic-scene
 ```
 The result is something like this:
 
