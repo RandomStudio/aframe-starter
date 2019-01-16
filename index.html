@@ -2,60 +2,14 @@
   <head>
     <title>A-frame starter project</title>
     <script src="index.js"></script>
+  </head>
   <body>
     
-      <!-- starting point from https://aframe.io/docs/0.7.0/guides/building-a-360-image-gallery.html#skeleton -->
       <a-scene>
-          <a-assets>
-            
-            <audio id="click-sound" src="audio/click.ogg"></audio>
-            <!-- Images. -->
-            <img id="city" crossorigin src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
-            <img id="city-thumb" crossorigin src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg">
-            <img id="cubes" crossorigin src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
-            <img id="cubes-thumb" crossorigin src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
-            <img id="sechelt" crossorigin src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
-            <img id="sechelt-thumb" crossorigin src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg">
 
-            <!-- Image link template to be reused. -->
-            <script id="link" type="text/html">
-              <a-entity class="link"
-                geometry="primitive: plane; height: 1; width: 1"
-                material="shader: flat; src: ${thumb}"
-                event-set__1="_event: mousedown; scale: 1 1 1"
-                event-set__2="_event: mouseup; scale: 1.2 1.2 1"
-                event-set__3="_event: mouseenter; scale: 1.2 1.2 1"
-                event-set__4="_event: mouseleave; scale: 1 1 1"
-                set-image="on: click; target: #image-360; src: ${src}"
-                sound="on: click; src: #click-sound"></a-entity>
-            </script>
+          <a-obj-model src="models/studio.obj"></a-obj-model>
 
-          </a-assets>
-
-          <!-- 360-degree image. -->
-          <a-sky id="image-360" radius="10" src="#city"></a-sky>
-
-          <!-- Image links. -->
-          <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
-            <a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb"></a-entity>
-            <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
-            <a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"></a-entity>
-          </a-entity>
-
-          <!-- Camera + Cursor. -->
-          <a-camera>
-            <a-cursor 
-              id="cursor"
-              animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
-              animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
-              event-set__1="_event: mouseenter; color: springgreen"
-              event-set__2="_event: mouseleave; color: black"
-              fuse="true"
-              raycaster="objects: .link"
-            />
-          </a-camera>
-          
-        </a-scene>
+      </a-scene>
 
   </body>
 </html>
